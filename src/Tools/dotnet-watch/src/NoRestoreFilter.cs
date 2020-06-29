@@ -63,7 +63,7 @@ namespace Microsoft.DotNet.Watcher.Tools
             }
             else
             {
-                reporter.Verbose($"Watch command will not use --no-restore. Unsupport dotnet-command '{dotnetCommand}'.");
+                reporter.Verbose($"Watch command will not use --no-restore. Unsupported dotnet-command '{dotnetCommand}'.");
                 return false;
             }
         }
