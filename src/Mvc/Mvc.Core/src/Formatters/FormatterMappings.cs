@@ -77,7 +77,10 @@ namespace Microsoft.AspNetCore.Mvc.Formatters
 
             format = RemovePeriodIfPresent(format);
 
-            _map.TryGetValue(format, out var value);
+            if (!_map.TryGetValue(format, out var value))
+            {
+                throw new ArgumentException(/*Resources.FormatFormatterMapping_MediaTypeInvalid(format)*/);
+            }
 
             return value;
         }

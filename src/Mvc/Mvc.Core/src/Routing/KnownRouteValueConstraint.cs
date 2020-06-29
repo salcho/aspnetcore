@@ -16,7 +16,7 @@ namespace Microsoft.AspNetCore.Mvc.Routing
     public class KnownRouteValueConstraint : IRouteConstraint
     {
         private readonly IActionDescriptorCollectionProvider _actionDescriptorCollectionProvider;
-        private RouteValuesCollection _cachedValuesCollection;
+        private RouteValuesCollection? _cachedValuesCollection;
 
         public KnownRouteValueConstraint(IActionDescriptorCollectionProvider actionDescriptorCollectionProvider)
         {
@@ -118,7 +118,7 @@ namespace Microsoft.AspNetCore.Mvc.Routing
                 _cachedValuesCollection = valuesCollection;
             }
 
-            return _cachedValuesCollection.Items;
+            return _cachedValuesCollection!.Items;
         }
 
         private class RouteValuesCollection

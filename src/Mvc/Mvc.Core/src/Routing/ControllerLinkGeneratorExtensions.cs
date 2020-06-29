@@ -39,12 +39,12 @@ namespace Microsoft.AspNetCore.Routing
         public static string GetPathByAction(
             this LinkGenerator generator,
             HttpContext httpContext,
-            string action = default,
-            string controller = default,
-            object values = default,
+            string? action = default,
+            string? controller = default,
+            object? values = default,
             PathString? pathBase = default,
             FragmentString fragment = default,
-            LinkOptions options = default)
+            LinkOptions? options = default)
         {
             if (generator == null)
             {
@@ -85,10 +85,10 @@ namespace Microsoft.AspNetCore.Routing
             this LinkGenerator generator,
             string action,
             string controller,
-            object values = default,
+            object? values = default,
             PathString pathBase = default,
             FragmentString fragment = default,
-            LinkOptions options = default)
+            LinkOptions? options = default)
         {
             if (generator == null)
             {
@@ -149,14 +149,14 @@ namespace Microsoft.AspNetCore.Routing
         public static string GetUriByAction(
             this LinkGenerator generator,
             HttpContext httpContext,
-            string action = default,
-            string controller = default,
-            object values = default,
-            string scheme = default,
+            string? action = default,
+            string? controller = default,
+            object? values = default,
+            string? scheme = default,
             HostString? host = default,
             PathString? pathBase = default,
             FragmentString fragment = default,
-            LinkOptions options = default)
+            LinkOptions? options = default)
         {
             if (generator == null)
             {
@@ -214,7 +214,7 @@ namespace Microsoft.AspNetCore.Routing
             HostString host,
             PathString pathBase = default,
             FragmentString fragment = default,
-            LinkOptions options = default)
+            LinkOptions? options = default)
         {
             if (generator == null)
             {
@@ -235,7 +235,7 @@ namespace Microsoft.AspNetCore.Routing
             return generator.GetUriByAddress<RouteValuesAddress>(address, address.ExplicitValues, scheme, host, pathBase, fragment, options);
         }
 
-        private static RouteValuesAddress CreateAddress(HttpContext httpContext, string action, string controller, object values)
+        private static RouteValuesAddress CreateAddress(HttpContext? httpContext, string? action, string? controller, object? values)
         {
             var explicitValues = new RouteValueDictionary(values);
             var ambientValues = GetAmbientValues(httpContext);
@@ -249,7 +249,7 @@ namespace Microsoft.AspNetCore.Routing
             };
         }
 
-        private static RouteValueDictionary GetAmbientValues(HttpContext httpContext)
+        private static RouteValueDictionary? GetAmbientValues(HttpContext? httpContext)
         {
             return httpContext?.Features.Get<IRouteValuesFeature>()?.RouteValues;
         }
