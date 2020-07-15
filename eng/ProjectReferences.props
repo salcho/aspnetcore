@@ -73,7 +73,7 @@
     <ProjectReferenceProvider Include="Microsoft.Extensions.Logging.AzureAppServices" ProjectPath="$(RepoRoot)src\Logging.AzureAppServices\src\Microsoft.Extensions.Logging.AzureAppServices.csproj"  />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.ConcurrencyLimiter" ProjectPath="$(RepoRoot)src\Middleware\ConcurrencyLimiter\src\Microsoft.AspNetCore.ConcurrencyLimiter.csproj"  />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.Cors" ProjectPath="$(RepoRoot)src\Middleware\CORS\src\Microsoft.AspNetCore.Cors.csproj"  />
-        <ProjectReferenceProvider Include="Microsoft.AspNetCore.Csp" ProjectPath="$(RepoRoot)src\Middleware\CSP\src\Microsoft.AspNetCore.Csp.csproj" />
+    <ProjectReferenceProvider Include="Microsoft.AspNetCore.Csp" ProjectPath="$(RepoRoot)src\Middleware\CSP\src\Microsoft.AspNetCore.Csp.csproj" />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.Diagnostics.Abstractions" ProjectPath="$(RepoRoot)src\Middleware\Diagnostics.Abstractions\src\Microsoft.AspNetCore.Diagnostics.Abstractions.csproj"  />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" ProjectPath="$(RepoRoot)src\Middleware\Diagnostics.EntityFrameworkCore\src\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.csproj"  />
     <ProjectReferenceProvider Include="Microsoft.AspNetCore.Diagnostics" ProjectPath="$(RepoRoot)src\Middleware\Diagnostics\src\Microsoft.AspNetCore.Diagnostics.csproj"  />
